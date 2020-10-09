@@ -1,0 +1,50 @@
+{
+  "title": "Journey",
+  "bsonType": "object",
+  "required": [
+    "_id",
+    "name"
+  ],
+  "properties": {
+    "_id": {
+      "bsonType": "objectId"
+    },
+    "_partition": {
+      "bsonType": "objectId"
+    },
+    "name": {
+      "bsonType": "string"
+    },
+    "viewPoints": {
+      "bsonType": "array",
+      "items": {
+        "title": "ViewPoint",
+        "bsonType": "object",
+        "required": [
+          "name"
+        ],
+        "properties": {
+          "name": {
+            "bsonType": "string"
+          },
+          "location": {
+            "title": "Location",
+            "bsonType": "object",
+            "required": [
+              "latitude",
+              "longitude"
+            ],
+            "properties": {
+              "latitude": {
+                "bsonType": "double"
+              },
+              "longitude": {
+                "bsonType": "double"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
